@@ -120,7 +120,7 @@
                         <!-- Usage: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>org.example/org.example.Launcher</mainClass>
+                            <mainClass>org.example/org.example.App</mainClass>
                         </configuration>
                     </execution>
                 </executions>
@@ -154,7 +154,7 @@
                             </filters>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>org.example.Launcher</mainClass>
+                                    <mainClass>org.example.App</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
