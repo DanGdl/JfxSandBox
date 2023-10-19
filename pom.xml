@@ -9,10 +9,11 @@
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>17</maven.compiler.source>
         <maven.compiler.target>17</maven.compiler.target>
-        <jfx.version>13</jfx.version>
+        <jfx.version>19.0.2.1</jfx.version>
     </properties>
 
     <dependencies>
+        <!-- WINDOWS -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-base</artifactId>
@@ -44,7 +45,7 @@
             <classifier>win</classifier>
         </dependency>
 
-
+        <!-- LINUX -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-base</artifactId>
@@ -76,6 +77,7 @@
             <classifier>linux</classifier>
         </dependency>
 
+        <!-- MAC -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-base</artifactId>
@@ -120,7 +122,7 @@
                         <!-- Usage: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
-                            <mainClass>org.example/org.example.App</mainClass>
+                            <mainClass>org.example/org.example.Launcher</mainClass>
                         </configuration>
                     </execution>
                 </executions>
@@ -154,7 +156,7 @@
                             </filters>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>org.example.App</mainClass>
+                                    <mainClass>org.example.Launcher</mainClass>
                                 </transformer>
                             </transformers>
                         </configuration>
